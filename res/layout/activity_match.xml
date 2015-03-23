@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.ipl.MatchActivity" >
+
+   <LinearLayout
+       android:layout_width="fill_parent"
+       android:layout_height="72dp"
+       android:gravity="top"
+       android:orientation="vertical"
+       tools:ignore="UselessLeaf,UselessParent" >
+
+                <TextView
+                    android:id="@+id/txtmatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:background="#F70A0A"
+                    android:gravity="center"
+                    android:text="Match"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+</RelativeLayout>
