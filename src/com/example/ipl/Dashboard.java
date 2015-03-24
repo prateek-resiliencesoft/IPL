@@ -1,24 +1,28 @@
 package com.example.ipl;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
 
-public class LoginActivity extends ActionBarActivity {
-
+public class Dashboard extends ActionBarActivity implements OnClickListener {
+TextView textnewbet;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.activity_login);
+		setContentView(R.layout.activity_dashboard);
+		textnewbet=(TextView)findViewById(R.id.txtnewbet);
+		textnewbet.setOnClickListener(this);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.login, menu);
+		getMenuInflater().inflate(R.menu.dashboard, menu);
 		return true;
 	}
 
@@ -32,5 +36,31 @@ public class LoginActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		try {
+			
+			
+			switch (v.getId()) {
+			case R.id.txtnewbet:
+				Intent intent=new Intent(Dashboard.this,MainActivity.class);
+				startActivity(intent);
+				
+				break;
+
+			default:
+				break;
+			}
+			
+			
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
 	}
 }
