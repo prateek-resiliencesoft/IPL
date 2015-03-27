@@ -9,5 +9,9 @@
     <string name="title_activity_match">MatchActivity</string>
     <string name="title_activity_dashboard">Dashboard</string>
     <string name="title_activity_history">History</string>
+    <string name="APP_ID">127605460617602</string>
+    <string name="title_activity_team">TeamActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_bet">BetActivity</string>
 
 </resources>

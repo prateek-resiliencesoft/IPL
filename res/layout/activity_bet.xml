@@ -1,0 +1,302 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@drawable/icon1"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.ipl.BetActivity" >
+
+    
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize" >
+    
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:gravity="top"
+                android:orientation="vertical"
+                tools:ignore="UselessLeaf" >
+
+                <TextView
+                    android:id="@+id/txtmatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:background="#F70A0A"
+                    android:gravity="center"
+                    android:text="Match"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                tools:ignore="UselessLeaf" >
+
+         </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="86dp"
+           android:gravity="center_vertical"
+           android:orientation="horizontal"
+           tools:ignore="UselessLeaf" >
+          
+           <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="30dp"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1" />
+
+                <TextView
+                    android:id="@+id/txtpointtwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.2"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txtteam1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_weight="2.37"
+                    android:background="#F70A0A"
+                    android:gravity="center"
+                    tools:ignore="HardcodedText" />
+                
+                
+                
+                 
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"                   
+                    android:layout_weight=".20" />
+                
+                
+                <TextView
+                     android:id="@+id/txtvs"
+                     android:layout_width="wrap_content"
+                     android:layout_height="25dp"
+                     android:layout_weight="0.67"
+                     android:background="#F70A0A"
+                      android:gravity="center"
+                     android:text="V/s"
+                     tools:ignore="HardcodedText" />
+                
+                
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"                   
+                    android:layout_weight=".20" />
+
+<TextView
+    android:id="@+id/txtpoint"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="2.8"
+    tools:ignore="HardcodedText" />
+
+                 <TextView
+                     android:id="@+id/txtteam2"
+                     android:layout_width="wrap_content"
+                     android:layout_height="25dp"
+                     android:layout_weight="2.61"
+                     android:background="#F70A0A"
+                     android:gravity="center"
+                     tools:ignore="HardcodedText" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1" />                
+                
+            </LinearLayout>                                                       
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="26dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                tools:ignore="UselessLeaf" >
+                
+              
+              <TextView
+                     android:id="@+id/txtleader"
+                     android:layout_width="wrap_content"
+                     android:layout_height="25dp"                    
+                      android:gravity="top"
+                     android:text="Leader"
+                     tools:ignore="HardcodedText" />
+              
+              
+
+         </LinearLayout> 
+      </LinearLayout>          
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="86dp"
+           android:gravity="center_vertical"
+           android:orientation="horizontal"
+           tools:ignore="UselessLeaf" >
+          
+           <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="30dp"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1" />
+                
+<TextView
+    android:id="@+id/txtpointoneforidtwo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="2.8"
+    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txtteam1foridsecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_weight="2.37"
+                    android:background="#F70A0A"
+                    android:gravity="center"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"                   
+                    android:layout_weight=".20" />
+                
+                
+                <TextView
+                     android:id="@+id/txtvsone"
+                     android:layout_width="wrap_content"
+                     android:layout_height="25dp"
+                     android:layout_weight="0.67"
+                     android:background="#F70A0A"
+                      android:gravity="center"
+                     android:text="V/s"
+                     tools:ignore="HardcodedText" />
+                
+                
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"                   
+                    android:layout_weight=".20" />
+                
+           <TextView
+               android:id="@+id/txtpointtwoforidtwo"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="3.2"
+               tools:ignore="HardcodedText" />
+           
+                 <TextView
+                     android:id="@+id/txtteam2foridsecond"
+                     android:layout_width="wrap_content"
+                     android:layout_height="25dp"
+                     android:layout_weight="2.61"
+                     android:background="#F70A0A"
+                     android:gravity="center"
+                     tools:ignore="HardcodedText" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1" />
+                
+                
+            </LinearLayout>
+           
+           
+           
+           
+           
+          <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="26dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                tools:ignore="UselessLeaf" >
+                
+              <TextView
+                  android:id="@+id/txtleader"
+                  android:layout_width="wrap_content"
+                  android:layout_height="25dp"
+                  android:gravity="top"
+                  android:text="Leader"
+                  tools:ignore="HardcodedText,DuplicateIds" />
+
+         </LinearLayout> 
+           
+           
+           
+           
+           
+
+         </LinearLayout>
+            
+            
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+            
+            
+      
+      
+            
+
+       
+       
+<!--        <LinearLayout -->
+<!--            android:layout_width="fill_parent" -->
+<!--            android:layout_height="100dp" -->
+<!--            android:gravity="center_vertical" -->
+<!--            android:orientation="vertical" -->
+<!--            tools:ignore="UselessLeaf" > -->
+
+<!--          </LinearLayout> -->
+
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="20dp"
+           android:gravity="center_vertical"
+           android:orientation="vertical"
+           tools:ignore="UselessLeaf" >
+
+         </LinearLayout>
+         
+       
+
+     </LinearLayout>
+    
+    
+    
+</RelativeLayout>
