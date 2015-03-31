@@ -8,9 +8,46 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.ipl.TeamActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+       <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="67dp"
+         android:gravity="center"
+         android:orientation="horizontal" >
+         
+          <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight=".20" />
+          
+            <ImageView
+                android:id="@+id/imgonetest"
+                android:layout_width="70dp"
+                android:layout_height="70dp"                 
+                android:layout_gravity="left"
+                android:background="@drawable/ipl"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter" />
+            
+            
+             <View
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1" />
+     
+           <ImageView
+                android:id="@+id/imgsecondtest"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/ipl"
+                android:layout_gravity="right"
+                
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter" />
+            <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight=".20" />
+               
+        </LinearLayout>
 
 </RelativeLayout>

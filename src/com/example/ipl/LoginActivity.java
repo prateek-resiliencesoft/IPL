@@ -26,6 +26,7 @@ import com.facebook.model.GraphUser;
 import com.facebook.widget.LoginButton;
 import com.facebook.widget.LoginButton.UserInfoChangedCallback;
 
+
 import android.support.v7.app.ActionBarActivity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -36,6 +37,8 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,14 +60,25 @@ public class LoginActivity extends ActionBarActivity {
 		uiHelper = new UiLifecycleHelper(this, statusCallback);
 		uiHelper.onCreate(savedInstanceState);				
 		setContentView(R.layout.activity_login);
-				
+						
+		SharedPreferences shpref = getSharedPreferences("IPL",MODE_PRIVATE);
+		if (shpref.getBoolean("login", false) == true) 
+		{
+			startActivity(new Intent(LoginActivity.this, MoreResultActivity.class));
+			finish();
+		} else {
+			
+			String msg= " my is " +shpref.getBoolean("login", false);
+			 Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_SHORT).show();
+			
+		}
 		
-		
-		name = (TextView) findViewById(R.id.name);
-		id = (TextView) findViewById(R.id.bday);
-		email = (TextView) findViewById(R.id.email);
 		loginBtn = (LoginButton) findViewById(R.id.authButton);
 		loginBtn.setReadPermissions(Arrays.asList("email"));
+		
+		
+		
+		
 		loginBtn.setUserInfoChangedCallback(new UserInfoChangedCallback() {
 			@Override
 			public void onUserInfoFetched(GraphUser user) {  
@@ -76,10 +90,12 @@ public class LoginActivity extends ActionBarActivity {
 					fbname=user.getName();
 					fbemail= user.getProperty("email").toString();
 					
-                           name.setText("You are currently logged in as " + user.getName());
-                           id.setText("You facebook id"+ user.getId());
-                           email.setText("You facebook email id"+ user.getProperty("email").toString());
- 
+					Toast.makeText(LoginActivity.this,"Internet Not Connected" +fbuid+fbuid+fbemail,Toast.LENGTH_SHORT).show();
+					
+//                           name.setText("You are currently logged in as " + user.getName());
+//                           id.setText("You facebook id"+ user.getId());
+//                           email.setText("You facebook email id"+ user.getProperty("email").toString());
+// 
 				} 
 				else
 				{
@@ -102,18 +118,8 @@ public class LoginActivity extends ActionBarActivity {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-
-
-
-
-	protected Boolean isNetworkAvailable() {
+	protected Boolean isNetworkAvailable()
+	{
 		ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
 		return activeNetworkInfo != null&& activeNetworkInfo.isConnectedOrConnecting();
@@ -125,6 +131,8 @@ public class LoginActivity extends ActionBarActivity {
 		public void call(Session session, SessionState state,
 				Exception exception) {
 			if (state.isOpened()) {
+				 Intent intent=new Intent(LoginActivity.this, MoreResultActivity.class);
+				 startActivity(intent);
 				Log.d("LoginActivity", "Facebook session opened.");
 			} else if (state.isClosed()) {
 				Log.d("LoginActivity", "Facebook session closed.");
@@ -210,14 +218,18 @@ public class LoginActivity extends ActionBarActivity {
 			     String type=""+jsonObj.get("LoginStatus");
 			     if(type.equals("true"))
 			     {
-			    	 Intent intent=new Intent(LoginActivity.this, Dashboard.class);
-					 startActivity(intent);
-						finish();						
+			    			
 						SharedPreferences shpref = getSharedPreferences("IPL", MODE_PRIVATE);
 						SharedPreferences.Editor editor = shpref.edit();
+						editor.putString("fbuserid", fbuid);
+						editor.putString("name", fbname);
+						editor.putString("email", fbemail);
 						editor.putString("access_token", access_token);
 						editor.putBoolean("login", true);
 						editor.commit(); 
+						 Intent intent=new Intent(LoginActivity.this, MoreResultActivity.class);
+						 startActivity(intent);
+						finish();				
 			     }else 
 			     {
 				   Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_SHORT).show();

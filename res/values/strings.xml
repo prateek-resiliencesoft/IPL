@@ -13,5 +13,7 @@
     <string name="title_activity_team">TeamActivity</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_bet">BetActivity</string>
+    <string name="title_activity_more_result">MoreResultActivity</string>
+    <string name="title_activity_single_team">SingleTeamActivity</string>
 
 </resources>
